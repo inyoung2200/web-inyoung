@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        div {
+            display: block;
+        }
+
+        #wrap {}
+
+        #header {
+            width: 100%;
+            height: 100px;
+        }
+
+        .container {
+            max-width: 1600px;
+            height: 100px;
+            background: #fff;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .logo {
+            position: absolute;
+            left: 40px;
+        }
+
+        .menu1 {
+            font-size: 18px;
+            margin-left: 280px;
+            margin-right: 11px;
+            padding: 15px;
+            color: rgba(0, 0, 0, .6);
+        }
+
+        .menu2 {
+            font-size: 18px;
+            margin: 0 11px;
+            padding: 15px;
+            color: rgba(0, 0, 0, .6);
+        }
+
+        .menu3 {
+            font-size: 18px;
+            margin: 0 11px;
+            padding: 15px;
+            color: rgba(0, 0, 0, .6);
+        }
+
+        .menu4 {
+            font-size: 18px;
+            margin: 0 11px;
+            padding: 15px;
+            color: rgba(0, 0, 0, .6);
+        }
+
+        .menu5 {
+            font-size: 18px;
+            margin-right: 250px;
+            padding: 15px;
+            color: rgba(0, 0, 0, .6);
+        }
+
+        .login {
+            display: inline-block;
+            width: 160px;
+            height: 40px;
+            border: 1px solid #000;
+            border-radius: 20px;
+            text-align: center;
+            line-height: 2.4;
+            color: #000;
+        }
+
+        #nav {
+            width: 100%;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .banner {
+            background-image: linear-gradient(180deg, #7e96ff 9%, #6179f8 73%);
+            padding: 134px 0 114px;
+        }
+
+        .banner .title {
+            display: inline-block;
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: -.24px;
+            color: hsla(0, 0%, 100%, .8);
+            margin-bottom: 35px;
+            border-bottom: 4px solid hsla(0, 0%, 100%, .2);
+        }
+
+        .banner h1 {
+            font-size: 50px;
+            line-height: 70px;
+            font-weight: 700;
+            letter-spacing: -.93px;
+            color: #fff;
+        }
+
+        .banner h2 {
+            margin-top: 17px;
+            font-size: 22px;
+            line-height: 38px;
+            letter-spacing: -.38px;
+            color: hsla(0, 0%, 100%, .8);
+        }
+
+        .banner h3 {
+            margin-top: 30px;
+            font-size: 18px;
+            line-height: 21px;
+            letter-spacing: -.77px;
+            color: hsla(0, 0%, 100%, .6);
+        }
+
+        .banner a {
+            display: inline-block;
+            margin: 60px auto 0;
+            padding: 0 70px;
+            border-radius: 36px;
+            box-shadow: 0 10px 30px 0 rgb(75 101 247 / 30%);
+            background-color: #fff;
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 62px;
+            letter-spacing: -.27px;
+            color: #4b65f7;
+        }
+
+        #content {
+            width: 100%;
+        }
+
+        .content {
+
+            margin: 0 auto;
+            padding: 50px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #f1f3ff;
+            padding: 110px 0 112px;
+        }
+
+        .content img {
+            margin-left: -91px;
+            width: 599px;
+            height: 439px;
+        }
+
+        .box {
+            display: inline-block;
+            overflow: hidden;
+        }
+
+        .box1 {
+            box-sizing: border-box;
+            width: 450px;
+            height: 130px;
+            padding: 35px;
+            border: 1px solid #eceefb;
+            border-radius: 15px;
+            background: #fff;
+            box-shadow: 0 8px 10px 0 #eceefb;
+            text-align: left;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .box2 {
+            box-sizing: border-box;
+            width: 450px;
+            height: 130px;
+            padding: 35px;
+            border: 1px solid #eceefb;
+            border-radius: 15px;
+            background: #fff;
+            box-shadow: 0 8px 10px 0 #eceefb;
+            text-align: left;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .box3 {
+            box-sizing: border-box;
+            width: 450px;
+            height: 130px;
+            padding: 35px;
+            border: 1px solid #eceefb;
+            border-radius: 15px;
+            background: #fff;
+            box-shadow: 0 8px 10px 0 #eceefb;
+            text-align: left;
+            position: relative;
+        }
+
+        .box1 p {
+            font-size: 19px;
+            line-height: 30px;
+            font-weight: 500;
+            letter-spacing: -.83px;
+            color: #424242;
+            position: relative;
+            display: inline-block;
+        }
+
+        .box1 p em::after {
+            position: absolute;
+            bottom: 3px;
+            right: -1px;
+            left: -1px;
+            height: 9px;
+            background: rgba(75, 101, 247, .2);
+            content: "";
+        }
+
+        .box2 p {
+            font-size: 19px;
+            line-height: 30px;
+            font-weight: 500;
+            letter-spacing: -.83px;
+            color: #424242;
+            position: relative;
+            display: inline-block;
+        }
+
+        .box2 p em::after {
+            position: absolute;
+            bottom: 33px;
+            right: -1px;
+            left: -1px;
+            height: 9px;
+            background: rgba(75, 101, 247, .2);
+            content: "";
+        }
+
+        .box3 p {
+            font-size: 19px;
+            line-height: 30px;
+            font-weight: 500;
+            letter-spacing: -.83px;
+            color: #424242;
+            position: relative;
+            display: inline-block;
+        }
+
+        .box3 p em::after {
+            position: absolute;
+            bottom: 3px;
+            right: -1px;
+            left: -1px;
+            height: 9px;
+            background: rgba(75, 101, 247, .2);
+            content: "";
+        }
+        
+
+        .box .link {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            right: 30px;
+            top: 50px;
+            font-size: 17px;
+            font-weight: 700;
+            letter-spacing: -.12px;
+            color: #4b65f7;
+        }
+
+        #footer {
+            display: block;
+            padding-bottom: 50px;
+            background: #000;
+            text-align: center;
+        }
+
+        .top {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 54px;
+            font-size: 14px;
+            line-height: 17px;
+            font-weight: 500;
+            letter-spacing: .47px;
+            color: #666;
+        }
+
+        .log {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+            width: 80px;
+            height: 29px;
+            border-radius: 4px;
+            background: #323232;
+            font-size: 13px;
+            letter-spacing: -.5px;
+            color: #999;
+        }
+
+        #footer p {
+            margin-top: 30px;
+            font-size: 14px;
+            line-height: 17px;
+            font-weight: 500;
+            letter-spacing: .47px;
+            color: #666;
+        }
+
+        .naver {
+            margin-top: 30px;
+            color: #666;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div class="container">
+                <div class="logo">로고</a>
+                    <a href="#" class="menu1">인플루언서 안내</a>
+                    <a href="#" class="menu2">광고수익 혜택</a>
+                    <a href="#" class="menu3">성장 지원 프로그램</a>
+                    <a href="#" class="menu4">브랜드커넥트</a>
+                    <a href="#" class="menu5">공지</a>
+                    <a href="#" class="login">인플루언서 로그인</a>
+                </div>
+            </div>
+            <div id="nav">
+                <div class="banner">
+                    <div class="title">엑스퍼트 컨설팅</div>
+
+                    <h1>법률, 세무부터 동영상 제작까지!<br>지식iN 엑스퍼트 상담, 클래스 이용을 지원합니다.</h1>
+                    <h2>혼자서는 해결하기 어려웠던 문제들,<br>1인 최대 10만원의 엑스퍼트 쿠폰으로 전문가의 도움을 받아보세요.</h2>
+                    <h3>지급 조건 상세 보기</h3>
+                    <a>내 eXpert쿠폰 확인하기</a>
+
+                </div>
+            </div>
+            <div id="content">
+                <div class="content">
+                    <img src="https://ncreatorsnext.pstatic.net/img/support_p@3x.b73b570f3bcd8c3cba47709c1e8b98d9.png">
+                    <div class="box">
+                        <div class="box1">
+                            <p>이 이미지 쓰고 싶은데<br><em class="aaa">저작권에 문제 없을까요?</em></p>
+                            <div class="link">법률 상담 받기></div>
+                        </div>
+                        <div class="box2">
+                            <p><em>광고 수익에 대한 세금 신고</em><br>꼭 해야하나요? 어떻게 하죠?</p>
+                            <div class="link">세무 상담 받기></div>
+                        </div>
+                        <div class="box3">
+                            <p>영상 콘텐츠 만들고 싶은데,<br><em>동영상 제작을 배우고 싶어요!</em></p>
+                            <div class="link">동영상 제작 상담></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="footer">
+                <a href="#" class="top" aria-valuetext="">top↑</a>
+                <a href="#" class="log">로그인</a>
+                <p>NAVER Copyright © NAVER Corp. All Rights Reserved.</p>
+                <div class="naver">NAVER</div>
+            </div>
+        </div>
+</body>
+
+</html>
